@@ -1,3 +1,5 @@
+**Utkarsh Raj 24BCS10318**
+
 # Command Practice
 
 ## 1. Local Host and interface configuration

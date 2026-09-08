@@ -1,3 +1,5 @@
+**Utkarsh Raj 24BCS10318**
+
 # Task 1: `git commit -a -m` vs `git commit -m`
 ## Difference
 * **`git commit -m "message"`**: Commits **only** the files that have been explicitly staged in the index using the `git add` command. If you modified a file but didn't run `git add`, it will not be committed.

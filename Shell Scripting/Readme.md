@@ -1,3 +1,5 @@
+**Utkarsh Raj 24BCS10318**
+
 # System Information Script
 
 A Bash script that gathers essential system metrics (date, hostname, logged-in user, disk usage, running processes), accepts user input via `read -p`, creates directories and files, and redirects process lists using `>`.
