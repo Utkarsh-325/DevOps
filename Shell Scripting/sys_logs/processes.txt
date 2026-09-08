@@ -1,0 +1,28 @@
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  1.6  0.1  24384 14320 ?        Ss   12:38   0:00 /sbin/init
+root           2  0.0  0.0   3072  1792 ?        Sl   12:38   0:00 /init
+root           7  0.0  0.0   3072  1792 ?        Sl   12:38   0:00 plan9 --control-socket 7 --log-level 4 --server-fd 8 --pipe-fd 10 --log-truncate
+root          47  0.2  0.1  42212 15616 ?        S<s  12:38   0:00 /usr/lib/systemd/systemd-journald
+systemd+      64  0.1  0.1  22400 13952 ?        Ss   12:38   0:00 /usr/lib/systemd/systemd-resolved
+root          69  0.4  0.1  35368 12032 ?        Ss   12:38   0:00 /usr/lib/systemd/systemd-udevd
+root         108  0.0  0.0   2880  1664 ?        Ss   12:38   0:00 /bin/sh /usr/lib/systemd/scripts/chronyd-starter.sh -n -F 1
+root         109  0.0  0.0   4464  2816 ?        Ss   12:38   0:00 /usr/sbin/cron -f -P
+message+     111  0.0  0.0   8784  4736 ?        Ss   12:38   0:00 @dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         137  0.5  0.3  44080 28384 ?        Ss   12:38   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         153  0.1  0.1  18424  8832 ?        Ss   12:38   0:00 /usr/lib/systemd/systemd-logind
+root         160  0.2  0.1 1792292 14080 ?       Ssl  12:38   0:00 /usr/libexec/wsl-pro-service
+root         172  0.0  0.1  19700  8448 ?        Ss   12:38   0:00 (agetty)
+syslog       177  0.1  0.0 220532  4736 ?        Ssl  12:38   0:00 /usr/sbin/rsyslogd -n -iNONE
+root         184  0.0  0.0   5484  2432 tty1     Ss+  12:38   0:00 /usr/sbin/agetty --noreset --noclear --issue-file=/etc/issue:/etc/issue.d:/run/issue.d:/usr/lib/issue.d - linux
+_chrony      205  0.1  0.1  23728  9596 ?        S    12:38   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         211  0.4  0.3 123444 31744 ?        Ssl  12:38   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+_chrony      220  0.0  0.0  12080  2248 ?        S    12:38   0:00 /usr/sbin/chronyd -n -F 1 -x
+root         301  0.0  0.0   3080   896 ?        Ss   12:38   0:00 /init
+root         303  0.0  0.0   3096  1028 ?        S    12:38   0:00 /init
+dean         305  0.0  0.0   6260  5376 pts/0    Ss   12:38   0:00 -bash
+root         309  0.0  0.0   8632  5248 ?        Ss   12:38   0:00 login -- dean
+dean         364  0.1  0.1  22448 13312 ?        Ss   12:38   0:00 /usr/lib/systemd/systemd --user
+dean         366  0.0  0.0  22904  4048 ?        S    12:38   0:00 (sd-pam)
+dean         391  0.0  0.0   6128  5248 pts/1    Ss+  12:38   0:00 -bash
+dean         444  0.0  0.0   4944  3456 pts/0    S+   12:38   0:00 /bin/bash ./sys_info.sh
+dean         472  0.0  0.0   7156  4224 pts/0    R+   12:38   0:00 ps aux
