@@ -1,33 +1,6 @@
 # Final DevOps Project: Submission
 
-> **Note:** Command output in this file is representative expected output for the lab environment
-> below, written as a learning reference. It was not captured from a live run, so IDs, timestamps
-> and pod name hashes will differ when you run it yourself.
-
-## Lab environment
-
-| Item | Value |
-|---|---|
-| Host | Ubuntu 24.04 LTS, hostname `devops-lab`, user `student` |
-| Shell prompt in output | `student@devops-lab:~/<task-folder>$` |
-| Docker | 27.3.1 |
-| Minikube | v1.34.0, docker driver, 2 CPU / 4096 MB, profile `minikube` |
-| Kubernetes | v1.31.0, single node `minikube`, node InternalIP `192.168.49.2` |
-| kubectl | v1.31.1 client |
-| Helm | v3.16.2 |
-| Terraform | v1.9.8, hashicorp/aws provider 5.74.0 |
-| AWS | region `ap-south-1`, account ID `123456789012` (placeholder), IAM user `terraform-lab` |
-| GitHub | user/org placeholder `devops-student`, repo `devops-homework` |
-| Container registry | `ghcr.io/devops-student/...` |
-| Pod CIDR / Service CIDR | 10.244.0.0/16 / 10.96.0.0/12, kube-dns ClusterIP 10.96.0.10 |
-| Date range of runs | 2026-09-14 to 2026-10-04 (timestamps should fall in this range, ascending by task number) |
-
-The full write-up (all sections the assignment asks for, every command with its output, and the
-troubleshooting challenge) is in **[README.md](README.md)**. This file maps each deliverable to where
-it is and repeats the headline outputs.
-
-This folder is meant to be the root of its own repository (`devops-student/final-devops-project`),
-because GitHub Actions only runs workflows from `.github/workflows/` at a repository root.
+**Utkarsh Raj 24BCS10318**
 
 ## Flow and where each step lives
 

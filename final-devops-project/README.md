@@ -1,6 +1,58 @@
 # Final DevOps Project: TaskBoard from commit to monitored Kubernetes
 
-**Utkarsh Raj 24BCS10318**
+> **Note:** Command output in this file is representative expected output for the lab environment
+> below, written as a learning reference. It was not captured from a live run, so IDs, timestamps
+> and pod name hashes will differ when you run it yourself.
+
+## Lab environment
+
+| Item | Value |
+|---|---|
+| Host | Ubuntu 24.04 LTS, hostname `devops-lab`, user `student` |
+| Shell prompt in output | `student@devops-lab:~/<task-folder>$` |
+| Docker | 27.3.1 |
+| Minikube | v1.34.0, docker driver, 2 CPU / 4096 MB, profile `minikube` |
+| Kubernetes | v1.31.0, single node `minikube`, node InternalIP `192.168.49.2` |
+| kubectl | v1.31.1 client |
+| Helm | v3.16.2 |
+| Terraform | v1.9.8, hashicorp/aws provider 5.74.0 |
+| AWS | region `ap-south-1`, account ID `123456789012` (placeholder), IAM user `terraform-lab` |
+| GitHub | user/org placeholder `devops-student`, repo `devops-homework` |
+| Container registry | `ghcr.io/devops-student/...` |
+| Pod CIDR / Service CIDR | 10.244.0.0/16 / 10.96.0.0/12, kube-dns ClusterIP 10.96.0.10 |
+| Date range of runs | 2026-09-14 to 2026-10-04 (timestamps should fall in this range, ascending by task number) |
+
+Project-specific additions:
+
+| Item | Value |
+|---|---|
+| Project repository | this folder is pushed as the root of `github.com/devops-student/final-devops-project` (GitHub Actions only reads `.github/workflows/` at a repository root) |
+| Images | `ghcr.io/devops-student/taskboard-backend:<sha7>`, `ghcr.io/devops-student/taskboard-frontend:<sha7>` |
+| Deployed version in the outputs | commit `4c2e9d1` |
+| Monitoring | kube-prometheus-stack 65.1.1, loki-stack 2.10.2 |
+| GitOps | Argo CD v2.12.4 |
+| Runs | 2026-10-03 (build, cloud, deploy) and 2026-10-04 (troubleshooting) |
+
+## Contents
+
+1. [Project overview](#1-project-overview)
+2. [Architecture](#2-architecture)
+3. [Technologies used](#3-technologies-used)
+4. [Repository layout](#4-repository-layout)
+5. [Application setup](#5-application-setup)
+6. [Docker setup](#6-docker-setup)
+7. [Kubernetes deployment](#7-kubernetes-deployment)
+8. [Helm deployment](#8-helm-deployment)
+9. [Terraform infrastructure](#9-terraform-infrastructure)
+10. [CI/CD pipeline](#10-cicd-pipeline)
+11. [DevSecOps implementation](#11-devsecops-implementation)
+12. [Monitoring](#12-monitoring)
+13. [GitOps](#13-gitops)
+14. [Troubleshooting challenge](#14-troubleshooting-challenge)
+15. [Final state output](#15-final-state-output)
+16. [Lessons learned](#16-lessons-learned)
+
+---
 
 ## 1. Project overview
 
